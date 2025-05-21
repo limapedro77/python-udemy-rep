@@ -1,1 +1,1 @@
-"# python-udemy" 
+"#Repositório para exercícios de Python da Udemy, esses exercícios (escolhidos, porque são muitos, tornando-se inviável colocar todos) fazem parte de um curso de 141 horas voltado para Python em que estou aprendendo conceitos como Python 3+ completo: PySide6, Django, Selenium, Regexp, Testes, TDD, POO, Design Patterns GoF, algoritmos e programação"
