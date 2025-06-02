@@ -1,12 +1,14 @@
 class Carro:
-    def __init__(self, Modelo):
+    def __init__(self, Marca, Modelo, Ano):
         self.modelo = Modelo
+        self.marca = Marca
+        self.ano = Ano
 
 #Criação de método
     def acelerar(self):
-        print(f'O {self.modelo} está acelerando!')
+        print(f'O {self.modelo} da {self.marca} do ano {self.ano} está acelerando!')
 
 #Aplicação métodos        
-fusca = Carro('Fusca')
+fusca = Carro('Wolkswagen','Fusca','1969')
 
 fusca.acelerar()
