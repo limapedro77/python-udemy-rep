@@ -10,5 +10,7 @@ class Carro:
 
 #Aplicação métodos        
 fusca = Carro('Wolkswagen','Fusca','1969')
+doblo = Carro('Fiat', 'Doblo', '2000')
 
 fusca.acelerar()
+doblo.acelerar()
