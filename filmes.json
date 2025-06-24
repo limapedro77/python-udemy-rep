@@ -1,0 +1,16 @@
+{
+  "filmes": [
+    {
+      "titulo": "Interestelar",
+      "ano": 2014,
+      "genero": ["Ficção Científica", "Aventura"],
+      "nota": 8.6
+    },
+    {
+      "titulo": "O Poderoso Chefão",
+      "ano": 1972,
+      "genero": ["Crime", "Drama"],
+      "nota": 9.2
+    }
+  ]
+}

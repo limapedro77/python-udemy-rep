@@ -1,0 +1,31 @@
+{
+  "filmes": [
+    {
+      "titulo": "Interestelar",
+      "ano": 2014,
+      "genero": [
+        "Ficção Científica",
+        "Aventura"
+      ],
+      "nota": 9.0
+    },
+    {
+      "titulo": "O Poderoso Chefão",
+      "ano": 1972,
+      "genero": [
+        "Crime",
+        "Drama",
+        "Suspense"
+      ],
+      "nota": 9.2
+    },
+    {
+      "titulo": "Clube da Luta",
+      "ano": 1999,
+      "genero": [
+        "Drama"
+      ],
+      "nota": 8.8
+    }
+  ]
+}
