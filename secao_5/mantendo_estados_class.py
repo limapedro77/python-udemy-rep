@@ -1,4 +1,4 @@
-class Camera:
+class Camera:      #possivel definir o estado inicial deum atributo
     def __init__(self, nome, filmando=False):
         self.nome = nome
         self.filmando = filmando

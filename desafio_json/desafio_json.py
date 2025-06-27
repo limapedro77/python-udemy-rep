@@ -5,7 +5,7 @@ caminho = Path(__file__).parent / 'filmes2.json'
 
 with open(caminho, 'r', encoding='utf-8') as arquivo:
     informacoes = json.load(arquivo)
-
+# Opções terminal
 while True:
     print("\n---  Bem-vindo ao sistema de cadastro e busca de filmes ---")
     print("1 - Listar todos os filmes")
@@ -16,7 +16,8 @@ while True:
     print("6 - Salvar as alterações")
     print("7 - Sair do programa")
     opcao = input("Digite o número da opção desejada: ").strip()[0]
-    
+ 
+ # Opções   
     if opcao == '1':
         print("\n\nLista de filmes:\n")
         for filme in informacoes['filmes']:
