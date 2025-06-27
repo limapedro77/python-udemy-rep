@@ -1,10 +1,10 @@
 import requests
 
-# Configurações da API
+# configurações da API
 api_key = "f768abe07d3f45dfb22211103252606"
 url_api = "http://api.weatherapi.com/v1/current.json"
 
-# Função para buscar dados da API para uma cidade
+# função para buscar dados da API para uma cidade
 def buscar_dados(cidade):
     parametros = {
         "key": api_key,
@@ -12,14 +12,13 @@ def buscar_dados(cidade):
         "lang": "pt"
     }
     try:
-        resposta = requests.get(url_api, params=parametros, timeout=5)
-        resposta.raise_for_status()  # Lança erro para códigos 4xx/5xx
+        resposta = requests.get(url_api, params=parametros)
         return resposta.json()
     except requests.exceptions.RequestException as e:
         print(f"Erro ao buscar dados para {cidade}: {e}")
         return None
 
-# Função para mostrar as informações da cidade
+# função para mostrar as informações da cidade
 def mostrar_dados(cidade, dados):
     try:
         temp = dados['current']['temp_c']
@@ -35,7 +34,7 @@ def mostrar_dados(cidade, dados):
     except (KeyError, TypeError):
         print(f"Erro ao exibir dados para {cidade}.")
 
-# Função para comparar temperaturas entre as cidades
+# função para comparar temperaturas entre as cidades
 def comparacao(cidade1, dados1, cidade2, dados2):
     try:
         temp1 = dados1['current']['temp_c']
@@ -43,19 +42,19 @@ def comparacao(cidade1, dados1, cidade2, dados2):
 
         print("\n--- Comparação ---")
         if temp1 > temp2:
-            print(f"🔥 {cidade1} está mais quente ({temp1}°C) que {cidade2} ({temp2}°C).")
+            print(f"{cidade1} está mais quente ({temp1}°C) que {cidade2} ({temp2}°C).")
         elif temp1 < temp2:
-            print(f"🔥 {cidade2} está mais quente ({temp2}°C) que {cidade1} ({temp1}°C).")
+            print(f"{cidade2} está mais quente ({temp2}°C) que {cidade1} ({temp1}°C).")
         else:
-            print(f"🌡️ {cidade1} e {cidade2} estão com a mesma temperatura: {temp1}°C.")
+            print(f"{cidade1} e {cidade2} estão com a mesma temperatura: {temp1}°C.")
     except (KeyError, TypeError):
         print("Erro ao comparar temperaturas.")
 
-# Entrada do usuário
+# entrada do usuário
 cidade1 = input("Digite a primeira cidade: ")
 cidade2 = input("Digite a segunda cidade: ")
 
-# Buscar e exibir dados
+# buscar e exibir dados
 dados1 = buscar_dados(cidade1)
 dados2 = buscar_dados(cidade2)
 
